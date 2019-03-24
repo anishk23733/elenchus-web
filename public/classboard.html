@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Elenchee | Classboard</title>
+    <link rel="shortcut icon" href="./images/favicon.png">
+
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        .sidenav a,
+        .sidenav-name {
+            padding: 6px 6px 6px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .main {
+            margin-left: 200px;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column
+                /* Same as the width of the sidenav */
+        }
+
+        .Title {
+            font-size: 8rem;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+        <header class="mdl-layout__header mdl-color-text--white" style="background-color: #000">
+            <div class="sidenav">
+                <div class="profile-pic sidenav-name"></div>
+                <h1 class="username sidenav-name"></h1>
+                <a href="#" id="welcome">Welcome</a>
+                <a href="#" id="discussion">Discussion</a>
+                <a href="#" id="hwhelp">Homework Help</a>
+                <a href="#" id="calendar">Calendar</a>
+                <a href="./dashboard.html">Return to Dashboard</a>
+            </div>
+
+            <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid">
+                <div id="user-container">
+                    <div hidden id="user-pic"></div>
+                    <div hidden id="user-name"></div>
+                    <button hidden id="sign-out"
+                        class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white">
+                        Sign-out
+                    </button>
+                    <button hidden id="sign-in"
+                        class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white">
+                        <i class="material-icons">account_circle</i>Sign-in with Google
+                    </button>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div class="main">
+        <h1 class="Title"></h1>
+        <p>Welcome to your Elenchus board!</p>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+
+    <script src="/__/firebase/5.7.3/firebase-app.js"></script>
+    <script src="/__/firebase/5.7.3/firebase-auth.js"></script>
+    <script src="/__/firebase/5.7.3/firebase-storage.js"></script>
+    <script src="/__/firebase/5.7.3/firebase-messaging.js"></script>
+    <script src="/__/firebase/5.7.3/firebase-firestore.js"></script>
+    <script src="/__/firebase/init.js"></script>
+
+    <script src="./scripts/classboard.js"></script>
+</body>
+
+</html>

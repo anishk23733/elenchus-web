@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Elenchus | Classboard</title>
+    <link rel="shortcut icon" href="./images/favicon.png">
+
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        .sidenav a,
+        .sidenav-name {
+            padding: 6px 6px 6px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .main {
+            margin-left: 200px;
+            /* Same as the width of the sidenav */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidenav">
+        <div class="profile-pic sidenav-name"></div>
+        <h1 class="username sidenav-name"></h1>
+        <a href="#" id="welcome">Welcome</a>
+        <a href="#" id="discussion">Discussion</a>
+        <a href="#" id="hwhelp">Homework Help</a>
+        <a href="#" id="calendar">Calendar</a>
+        <a href="./dashboard.html">Return to Dashboard</a>
+    </div>
+
+
+    <div class="main">
+        <h1 class="Title"></h1>
+        <!-- <div style="width: 1100px; height: 800px;" id="aww-wrapper"> -->
+        <!-- Element in which the whiteboard will be shown
+              – modify style as needed -->
+        <!-- </div>
+        <script src="https://awwapp.com/static/widget/js/aww.min.js">
+        </script>
+        <script type="text/javascript">
+            var aww = new AwwBoard('#aww-wrapper', {
+                apiKey: 'eff3f8b1-c221-4c77-af96-129e199abb39',
+                boardLink: 'uvkxg2bp3'
+            });
+        </script> -->
+        <iframe width="100%" height="650px" src="https://awwapp.com/b/uvkxg2bp3/"></iframe>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+
+    <script src="/__/firebase/5.7.3/firebase-app.js"></script>
+    <script src="/__/firebase/5.7.3/firebase-auth.js"></script>
+    <script src="/__/firebase/5.7.3/firebase-storage.js"></script>
+    <script src="/__/firebase/5.7.3/firebase-messaging.js"></script>
+    <script src="/__/firebase/5.7.3/firebase-firestore.js"></script>
+    <script src="/__/firebase/init.js"></script>
+
+    <script src="./scripts/classboard.js"></script>
+</body>
+
+</html>

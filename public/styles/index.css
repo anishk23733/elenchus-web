@@ -1,0 +1,61 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.index-header {
+    /* padding: 3rem 3rem; */
+    display: inline-block;
+    height: 90vh;
+    flex-direction: row;
+    width: 100%;
+    /* background-image: linear-gradient(to right, #434343 0%, black 100%); */
+    /* background-image: linear-gradient(to top left, purple, blue); */
+    background-image: linear-gradient(to top left, purple, blue);
+    /* background-image: url('../images/samuel-zeller-106867-unsplash.jpg'); */
+    background-attachment: fixed;
+    /* background-size: cover; */
+}
+
+.navigation {
+    padding: 3rem 5rem;
+
+}
+
+.navigation h1 {
+    display: inline;
+    color: #fff;
+    font-size: 2rem;
+    letter-spacing: 4px;
+
+}
+
+.navigation-ul {
+    list-style: none;
+    display: inline;
+}
+
+.navigation-ul li {
+    display: inline;
+    margin-right: 2rem;
+    float: right;
+}
+
+.navigation-ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.navigation-ul li a:hover {
+    text-decoration: none;
+    color: #f0f0f0;
+}
+
+.text-center {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 2rem;
+}

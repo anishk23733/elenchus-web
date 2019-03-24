@@ -1,0 +1,76 @@
+.login-page {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to top left, purple, blue);
+}
+
+.sign-in-box {
+    width: 20rem;
+    height: 15rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    top: 50%;
+    left: 50% transform: translate(-50%, -50%);
+    box-shadow: inset 0px 0px 0px 4px rgba(0, 0, 0, 0.3);
+
+}
+
+.sign-in-title {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.btn-container {
+    /* height: 100%; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    perspective: 400px;
+}
+
+.btn {
+    letter-spacing: 2px;
+    padding: 9px 30px;
+    font-weight: 10;
+    text-transform: uppercase;
+    background: transparent;
+    border: none;
+    border-radius: 100px;
+    -webkit-box-shadow: inset 0px 0px 0px 4px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 0px 0px 0px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0px 0px 0px 4px rgba(0, 0, 0, 0.3);
+    color: rgb(255, 255, 255);
+    transition-timing-function: ease-in-out;
+    transition: 0.3s all;
+    transform: scale(1) rotateX(0) rotateY(0);
+    transform-style: preserve-3d;
+    will-change: transform box-shadow;
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(to top left, purple, blue);
+
+
+}
+
+
+
+.btn:hover {
+    color: #fff;
+    -webkit-box-shadow: inset 0px 0px 0px 20px #1411ad, 0px 10px 35px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 0px 0px 0px 20px 00rgb(0, 0, 0), 0px 10px 35px rgba(0, 0, 0, 0.4);
+    box-shadow: inset 0px 0px 0px 20px black, 0px 10px 35px rgba(0, 0, 0, 0.4);
+}
+
+.snapchat-btn {
+    margin-top: 2rem;
+
+}

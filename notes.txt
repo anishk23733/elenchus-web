@@ -1,0 +1,5 @@
+Hosting locally:
+firebase serve --only hosting
+
+Deploying:
+firebase deploy --except functions

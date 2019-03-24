@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+    * {
+        font-family: 'Lato'
+    }
+
+    .joinButton {
+        height: 10vh;
+        border-radius: 8px;
+        font-size: 1rem;
+        background-color: white;
+        color: black;
+        width: 150px;
+    }
+
+    .joinButton:hover {
+        box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+        transform: translateY(-0.25em);
+        background: #C9CCD3;
+        background-image: linear-gradient(-180deg, rgba(255, 255, 255, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%);
+        background-blend-mode: lighten;
+        color: black;
+    }
+
+    .createClassButtons {
+        height: 10vh;
+        border-radius: 8px;
+        font-size: 1rem;
+        background-color: white;
+        color: black;
+        width: 150px;
+
+    }
+
+    .createClassButtons:hover {
+        box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+        transform: translateY(-0.25em);
+        background: #C9CCD3;
+        background-image: linear-gradient(-180deg, rgba(255, 255, 255, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%);
+        background-blend-mode: lighten;
+        color: black;
+    }
+
+    body {
+        height: 100vh;
+        background-image: linear-gradient(to top left, purple, blue);
+        background-repeat: no-repeat;
+        /* margin: 2rem; */
+    }
+
+    .title {
+        color: white;
+        font-family: "Lato", "serif";
+        letter-spacing: 0.15rem;
+
+
+    }
+
+    .headingInPage {
+        margin-top: 0;
+    }
+
+    .modal-content {
+        border-radius: 8px;
+        background-color: white;
+    }
+
+    .navigation-ul2 {
+        list-style: none;
+    }
+
+    .navigation-ul2 li a {
+        text-decoration: none;
+        color: white;
+        float: right;
+        margin-right: 20px
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Elenchus | Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="./styles/dashboard.css" />
+    <link rel="shortcut icon" href="./images/favicon.png">
+
+</head>
+
+
+<body>
+
+    <div class="classroomChooser">
+        <div classs="joinButtons">
+            <header class="index-header">
+                <nav class="navigation">
+                    <ul class="navigation-ul2">
+                        <li class="title" style="float: left; font-size:
+                        2rem">Dashboard</li>
+                        <li><a class="loggerOut" href="./index.html">Log Out</a></li>
+                        <li><a href="./index.html">Home</a></li>
+                        <!-- <li><a href="./index.html">Home</a></li> -->
+                    </ul>
+                </nav>
+            </header>
+            <br>
+            <div style="margin-top: 3rem">
+                <button id="joinClassBtn" class="joinButton">Join a class</button>
+                <button id="createClassBtn" class="createClassButtons">Create a class</button>
+            </div>
+        </div>
+        <div id="table">
+
+        </div>
+
+        <div id="modal" class="joinClassModal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h1 class="headingInPage">Join a class</h1>
+                <form class="Surounding">
+                    Class Name:
+                    <input autocomplete="off" type="text" name="classname" id="joinClassname">
+                    <br>
+                    Join Code:
+                    <input autocomplete="off" type="text" name="joincode" id="joincodeEnter"><br>
+                    <button href="" class="joinClassButton">Join</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <div id="modal2" class="createClassModal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h1 class="headingInPage">Create a class</h1>
+            <form class="classCreator">
+                Class Name:
+                <input autocomplete="off" type="text" name="classname" id="classname">
+                <br>
+                Join Code:
+                <input autocomplete="off" type="text" name="joincode" id="joincode"><br>
+                <button class="createClassButton">Create</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+
+    <script src="/__/firebase/5.7.3/firebase-app.js"></script>
+    <script src="/__/firebase/5.7.3/firebase-auth.js"></script>
+    <script src="/__/firebase/5.7.3/firebase-storage.js"></script>
+    <script src="/__/firebase/5.7.3/firebase-messaging.js"></script>
+    <script src="/__/firebase/5.7.3/firebase-firestore.js"></script>
+    <script src="/__/firebase/init.js"></script>
+
+    <!-- <script src="./scripts/main.js"></script> -->
+    <script src="./scripts/modal.js"></script>
+    <script src="./scripts/classes.js"> </script>
+
+    <script>
+        function signOut() {
+            // Sign out of Firebase.
+            firebase.auth().signOut();
+        }
+
+        document.querySelector('a.loggerOut').addEventListener('click', (event) => {
+            event.preventDefault();
+            signOut();
+            console.log('signed out!');
+            window.location.href = './index.html'
+        })
+    </script>
+</body>
+
+
+</html>

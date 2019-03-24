@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Elenchus | Login</title>
+
+    <!-- App Styling -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" type="text/css" href="./styles/index.css">
+    <link rel="shortcut icon" href="./images/favicon.png">
+
+</head>
+
+<body>
+
+    <header class="login-page">
+        <div class="sign-in-box">
+            <div class="sign-in-title">
+                Welcome!
+            </div>
+            <div class="btn-container">
+                <button class="btn" id="sign-in">
+                    <img class=google
+                        src="https://www.trainingtoyou.com/wp-content/uploads/2018/08/2000px-Google__G__Logo.svg_.png"
+                        height='15px' style="margin-right: 5px"> Sign
+                    in with Google
+                </button>
+                <div id="my-login-button-target" class="snapchat-btn" />
+                <script>
+                    window.snapKitInit = function () {
+                        var loginButtonIconId = 'my-login-button-target';
+                        // Mount Login Button
+                        snap.loginkit.mountButton(loginButtonIconId, {
+                            clientId: '03cf4d70-ad08-4b0a-9470-2e89b606ee35',
+                            redirectURI: 'https://elenchus-6588a.firebaseapp.com/dashboard.html',
+                            scopeList: [
+                                'user.display_name',
+                                'user.bitmoji.avatar',
+                            ],
+                            handleResponseCallback: function () {
+                                snap.loginkit.fetchUserInfo()
+                                    .then(data => console.log('User info:', data));
+                            },
+                        });
+                    };
+
+                    // Load the SDK asynchronously
+                    (function (d, s, id) {
+                        var js, sjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) return;
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = "https://sdk.snapkit.com/js/v1/login.js";
+                        sjs.parentNode.insertBefore(js, sjs);
+                    }(document, 'script', 'loginkit-sdk'));
+                </script>
+
+
+            </div>
+            <div class="username"></div>
+        </div>
+    </header>
+    <script>
+        const btn = document.querySelector('.btn');
+
+        btn.addEventListener('mousemove', (e) => {
+            const sensitivity = 30;
+            const {
+                offsetX,
+                offsetY
+            } = e;
+            const {
+                offsetHeight,
+                offsetWidth
+            } = e.target;
+
+            const y = -((offsetX / offsetWidth) - 0.5) * sensitivity;
+            const x = ((offsetY / offsetHeight) - 0.5) * sensitivity;
+
+            btn.style.transform = `rotateX(${x}deg) rotateY(${y}deg) rotateZ(0) scale(1.2)`;
+        });
+
+        btn.addEventListener('mouseout', () => {
+            btn.style.transform = "scale(1.0) rotateX(0) rotateY(0)";
+        });
+    </script>
+
+    <script src="/__/firebase/5.7.3/firebase-app.js"></script>
+    <script src="/__/firebase/5.7.3/firebase-auth.js"></script>
+    <script src="/__/firebase/5.7.3/firebase-storage.js"></script>
+    <script src="/__/firebase/5.7.3/firebase-messaging.js"></script>
+    <script src="/__/firebase/5.7.3/firebase-firestore.js"></script>
+    <script src="/__/firebase/init.js"></script>
+    <script src="scripts/login.js"></script>
+
+</body>
+
+</html>
