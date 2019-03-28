@@ -26,3 +26,11 @@ We're proud of completing a full web application that has a database, is hosted 
 ## What's next for Elenchus
 
 Although Elenchus is functional, we want to add more integration with Snap Kit to allow our website to seamlessly retrieve information about a user's Snapchat profile. We also plan to create a fully functional forum where students can post specific questions and threads can be created to discuss and respond to them.
+
+## The Web App
+
+With the .com domain:
+[https://elenchus-ed.com/](https://elenchus-ed.com/).
+
+The Firebase app:
+[https://elenchus-6588a.firebaseapp.com/](https://elenchus-6588a.firebaseapp.com/).
