@@ -20,7 +20,6 @@
     top: 50%;
     left: 50% transform: translate(-50%, -50%);
     box-shadow: inset 0px 0px 0px 4px rgba(0, 0, 0, 0.3);
-
 }
 
 .sign-in-title {
@@ -57,7 +56,6 @@
     display: flex;
     align-items: center;
     background-image: linear-gradient(to top left, purple, blue);
-
 
 }
 

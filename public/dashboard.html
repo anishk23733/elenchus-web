@@ -47,7 +47,8 @@
         height: 100vh;
         background-image: linear-gradient(to top left, purple, blue);
         background-repeat: no-repeat;
-        /* margin: 2rem; */
+        margin: 0
+            /* margin: 2rem; */
     }
 
     .title {
@@ -75,7 +76,7 @@
         text-decoration: none;
         color: white;
         float: right;
-        margin-right: 20px
+        margin-right: 40px
     }
 </style>
 
@@ -91,46 +92,57 @@
 
 
 <body>
-
-    <div class="classroomChooser">
-        <div classs="joinButtons">
-            <header class="index-header">
-                <nav class="navigation">
-                    <ul class="navigation-ul2">
-                        <li class="title" style="float: left; font-size:
+    <header class="index-header">
+        <nav class="navigation">
+            <ul class="navigation-ul2">
+                <li class="title" style="float: left; font-size:
                         2rem">Dashboard</li>
-                        <li><a class="loggerOut" href="./index.html">Log Out</a></li>
-                        <li><a href="./index.html">Home</a></li>
-                        <!-- <li><a href="./index.html">Home</a></li> -->
-                    </ul>
-                </nav>
-            </header>
-            <br>
-            <div style="margin-top: 3rem">
-                <button id="joinClassBtn" class="joinButton">Join a class</button>
-                <button id="createClassBtn" class="createClassButtons">Create a class</button>
+                <li><a class="loggerOut" href="./index.html">Log Out</a></li>
+                <li><a href="./index.html">Home</a></li>
+                <!-- <li><a href="./index.html">Home</a></li> -->
+            </ul>
+        </nav>
+    </header>
+
+    <section style="height: 90vh">
+        <div class="classroomChooser">
+            <div classs="joinButtons">
+                <br>
+                <div style="margin-top: 3rem">
+                    <button id="joinClassBtn" class="joinButton">Join a class</button>
+                    <button id="createClassBtn" class="createClassButtons">Create a class</button>
+                </div>
             </div>
-        </div>
-        <div id="table">
+            <div id="table">
 
-        </div>
-
-        <div id="modal" class="joinClassModal">
-            <!-- Modal content -->
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h1 class="headingInPage">Join a class</h1>
-                <form class="Surounding">
-                    Class Name:
-                    <input autocomplete="off" type="text" name="classname" id="joinClassname">
-                    <br>
-                    Join Code:
-                    <input autocomplete="off" type="text" name="joincode" id="joincodeEnter"><br>
-                    <button href="" class="joinClassButton">Join</button>
-                </form>
             </div>
-        </div>
 
+
+        </div>
+    </section>
+
+    <footer style="background-color: #111; padding: 2rem; color: #fff">
+        <span>Anish Kachinthaya, Yuvraj Khullar, and Raghavan
+            Ramaswamy</s>
+            <span style="float: right">Coded with 💖 at LAHacks 4</span>
+    </footer>
+
+
+
+    <div id="modal" class="joinClassModal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h1 class="headingInPage">Join a class</h1>
+            <form class="Surounding">
+                Class Name:
+                <input autocomplete="off" type="text" name="classname" id="joinClassname">
+                <br>
+                Join Code:
+                <input autocomplete="off" type="text" name="joincode" id="joincodeEnter"><br>
+                <button href="" class="joinClassButton">Join</button>
+            </form>
+        </div>
     </div>
     <div id="modal2" class="createClassModal">
         <!-- Modal content -->
@@ -147,6 +159,7 @@
             </form>
         </div>
     </div>
+
     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
 

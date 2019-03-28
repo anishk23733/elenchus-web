@@ -82,7 +82,7 @@
         }
 
         .flip-card-back {
-            background-color: purple;
+            background-image: linear-gradient(to top left, purple, blue);
             color: white;
             transform: rotateY(180deg);
             z-index: 1;
@@ -115,11 +115,12 @@
             background-color: blue;
             color: #fff;
             border: none;
-            padding: .5rem
+            padding: .5rem;
+            transition: all .2s;
         }
 
         .contact-btn:hover {
-            background-color: darkblue;
+            background-color: rgb(25, 25, 168);
         }
     </style>
 
@@ -128,7 +129,7 @@
 <body>
     <header class="index-header">
         <nav class="navigation">
-            <h1>ELENCHUS</h1>
+            <h1><a href="./index.html" style="text-decoration: none; color: #fff">ELENCHUS</a></h1>
             <ul class="navigation-ul">
                 <li><a href="./login.html">Login</a></li>
                 <li><a href="#about">About</a></li>
@@ -136,8 +137,10 @@
             </ul>
         </nav>
         <div class='text-center'>
-            <h1>The Future of the World is in<br>Elenchus today.</h1>
-            <!-- <h1><span style="font-size: 7rem">Elenchus</span>.<br> The Future. Today.</h1> -->
+            <!-- <h1>The Future of the World is in<br>Elenchus today.</h1> -->
+            <h1><span style="font-size: 6rem" data-aos="fade-up">Elenchus</span>.<br><span style="font-size: 1.75rem"
+                    data-aos="fade-up">The Future of
+                    Education. Today.</span> </h1>
         </div>
 
     </header>
@@ -148,6 +151,7 @@
     <section class="sectionCards" id="about" style="margin-top: 20px">
         <div class="title">
             <h1>What is Elenchus?</h1>
+            <h4>Elenchus is a unified platform for collaborative learning.</h4>
         </div>
         <div class=" card-deck" style="width: 100%" class="card-deck" ;>
             <div class="allCards card-deck">
@@ -246,7 +250,7 @@
         </div>
     </section>
 
-    <footer style="background-color: #000; padding: 2rem; color: #fff">
+    <footer style="background-color: #111; padding: 2rem; color: #fff">
         <span>Anish Kachinthaya, Yuvraj Khullar, and Raghavan
             Ramaswamy</s>
             <span style="float: right">Coded with 💖 at LAHacks 4</span>

@@ -4,6 +4,8 @@
 
 }
 
+
+
 .joinClassModal,
 .createClassModal {
     display: none;
@@ -98,6 +100,7 @@ span.class-card {
     border: 3px solid transparent;
     padding: 15px;
     background-color: white;
+    border: 5px solid #ccc;
     width: 15vw;
     font-size: 15px;
 
@@ -105,7 +108,6 @@ span.class-card {
 
 span.class-card:hover {
     background-color: #dfdfdf;
-
 }
 
 .navigation-ul {
