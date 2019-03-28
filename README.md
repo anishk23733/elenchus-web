@@ -1,5 +1,4 @@
-# Firebase Web Codelab - Start code
+# Elenchus
 
-This folder contains the starting code for the [Firebase: Build a Real Time Web Chat App Codelab](https://codelabs.developers.google.com/codelabs/firebase-web/).
-
-If you'd like to jump directly to the end and see the finished code head to the [web](../web) directory.
+[Los Altos Hacks Winner: Best Use
+of Snap Kit](https://devpost.com/software/elenchus).
